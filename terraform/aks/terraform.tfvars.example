@@ -1,0 +1,3 @@
+# Modèle — copiez ce fichier en terraform.tfvars, puis renseignez VOS valeurs.
+resource_group_name = "rg-xxx_cours-azure-kubernetes" # le nom EXACT de votre resource group
+# (ex. rg-<login>_cours-azure-kubernetes)
