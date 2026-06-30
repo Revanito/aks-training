@@ -1,4 +1,7 @@
+# Cours Kubernetes - 35h
+ENI 2026
+
 # AKS Training
 Projet fil rouge de la formation Kubernetes & AKS.
 - `terraform/aks/` : provisionnement du cluster AKS (Terraform, état local)
-- `k8s/webapp/` : manifests de l'application fil rouge `webapp
+- `k8s/webapp/` : manifests de l'application fil rouge `webapp`
