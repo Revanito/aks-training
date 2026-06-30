@@ -4,31 +4,31 @@ metadata:
   name: webapp
   namespace: webapp
   labels:
-    app: webapp          # ← Fixed
+    app: webapp # ← Fixed
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nginx         # ← Fixed (must match template.metadata.labels)
+      app: webapp # ← Fixed (must match template.metadata.labels)
   template:
     metadata:
       labels:
-        app: nginx       # ← Fixed (must match selector.matchLabels)
+        app: webapp # ← Fixed (must match selector.matchLabels)
     spec:
       containers:
-      - name: webapp
-        image: nginx:1.27
-        ports:
-        - containerPort: 80
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 3
-          periodSeconds: 5
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 10
-          periodSeconds: 10
+        - name: webapp
+          image: nginx:1.27
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10

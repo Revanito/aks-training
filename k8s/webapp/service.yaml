@@ -5,11 +5,11 @@ metadata:
   name: webapp
   namespace: webapp
   labels:
-    app: webapp                
+    app: webapp
 spec:
   type: ClusterIP
   selector:
-    app: nginx       # TODO 6 — = label du pod (TODO 3)          
+    app: webapp # TODO 6 — = label du pod (TODO 3)
   ports:
-  - port: 80
-    targetPort: 80             # TODO 7 — = containerPort (TODO 5) 
+    - port: 80
+      targetPort: 80 # TODO 7 — = containerPort (TODO 5)
